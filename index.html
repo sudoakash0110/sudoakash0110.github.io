@@ -1,417 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>stackbrains_</title>
-    <!-- Add Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon_square.ico">
-    <!-- load stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading</title>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      background: #0b0f14;
+      color: #00ff9c;
+      font-family: "Share Tech Mono", monospace;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .loading {
+      font-size: clamp(2rem, 6vw, 5rem);
+      letter-spacing: 0;
+      text-shadow: 0 0 12px rgba(0, 255, 156, 0.7);
+    }
+
+    .dots::after {
+      content: "";
+      animation: dots 1.2s steps(4, end) infinite;
+    }
+
+    @keyframes dots {
+      0% {
+        content: "";
+      }
+
+      25% {
+        content: ".";
+      }
+
+      50% {
+        content: "..";
+      }
+
+      75%,
+      100% {
+        content: "...";
+      }
+    }
+  </style>
 </head>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const slider = document.querySelector('.value-prop-slider');
-    const dotsContainer = document.querySelector('.slider-dots');
-    const dots = document.querySelectorAll('.dot');
-
-    slider.addEventListener('scroll', function () {
-      const scrollPercentage = slider.scrollLeft / (slider.scrollWidth - slider.clientWidth);
-      const activeDotIndex = Math.round(scrollPercentage * (dots.length - 1));
-
-      dots.forEach((dot, index) => {
-        if (index === activeDotIndex) {
-          dot.classList.add('active');
-        } else {
-          dot.classList.remove('active');
-        }
-      });
-
-      const dotContainerWidth = dotsContainer.offsetWidth;
-      const maxMove = slider.offsetWidth - dotContainerWidth;
-      const move = scrollPercentage * maxMove;
-      dotsContainer.style.transform = `translateX(${move}px)`;
-    });
-  });
-</script>
 <body>
-<header>
-    <div class="logo">
-        <img src="assets/small-logo.png" alt="Stackbrains Logo">
-        <!--        <a href="https://stackbrains.dev">-->
-        <a href="index.html">
-            <span class="company-name">stackbrains_</span>
-        </a>
-    </div>
-    <nav>
-        <a href="product.html">Product</a>
-        <a href="integrations.html">Integration</a>
-        <a href="#about-us">About Us</a>
-    </nav>
-    <div class="cta-buttons">
-        <a href="https://app.youform.com/forms/q75ibqeh" target="_blank">
-            <button class="book-a-demo-button">Book a Demo<span class="arrow">→</span></button>
-        </a>
-        <!-- <button class="contact-us">Contact Us</button> -->
-    </div>
-</header>
-
-<main>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Data You Can Trust, Insights You Can Act On.</h1>
-            <p>Ensure every decision is backed by reliable data. With Stackbrains, gain unmatched visibility, proactive
-                error alerts, and AI-driven consistency across your entire data stack.</p>
-            <a href="https://app.youform.com/forms/q75ibqeh" target="_blank">
-                <button class="get-started-now-button">Get Started Now <span class="arrow">→</span></button>
-            </a>
-        </div>
-        <div class="hero-image">
-            <img src="assets/hero-laptop.png" alt="Stackbrains Dashboard">
-        </div>
-    </section>
-
-    <section class="backed-by-antler">
-        <span class="backed-by-text">Backed by</span>
-        <a href="https://www.antler.co/" target="_blank" rel="noopener noreferrer">
-            <img src="assets/antler_vc.png" alt="Antler VC" class="vc-logo">
-        </a>
-    </section>
-
-    <section class="features">
-        <h2>Our Features</h2>
-        <div class="feature-grid">
-            <div class="feature-card card-1">
-                <div class="card-content">
-                    <span class="feature-number">1</span>
-                    <h3>End-to-end visibility of data stacks.</h3>
-                    <p>Gain complete insight into every component and process within your data ecosystem.</p>
-                </div>
-            </div>
-            <div class="feature-card card-2">
-                <div class="card-content">
-                    <span class="feature-number">2</span>
-                    <h3>Proactive investigation of errors.</h3>
-                    <p>Identify and resolve potential data problems before they impact your operations.</p>
-                </div>
-            </div>
-            <div class="feature-card card-3">
-                <div class="card-content">
-                    <span class="feature-number">3</span>
-                    <h3>Instant alerts on data issues.</h3>
-                    <p>Stay ahead with real-time notifications when disruptions occur in your data pipeline.</p>
-                </div>
-            </div>
-            <div class="feature-card card-4">
-                <div class="card-content">
-                    <span class="feature-number">4</span>
-                    <h3>ML-based monitoring for data health.</h3>
-                    <p>Leverage machine learning to continuously monitor and maintain optimal data integrity.</p>
-                </div>
-            </div>
-            <div class="feature-card card-5">
-                <div class="card-content">
-                    <span class="feature-number">5</span>
-                    <h3>AI-driven resolution of data inconsistencies.</h3>
-                    <p>Utilize AI-driven solutions to automatically correct and prevent data anomalies.</p>
-                </div>
-            </div>
-            <div class="feature-card card-6">
-                <div class="card-content">
-                    <span class="feature-number">6</span>
-                    <h3>Custom quality checks at data ingestion.</h3>
-                    <p>Ensure data accuracy from the start with tailored validation rules at the point of entry.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="value-proposition">
-        <h2>Value propositions</h2>
-        <p class="section-description">Discover the Key Benefits that Drive Your Data Success. Enhance efficiency,
-            ensure compliance, and empower your team with our powerful, AI-driven solutions.</p>
-        <div class="value-prop-slider">
-            <div class="value-prop-container">
-                <div class="value-prop-card">
-                    <img src="assets/value-prop1.svg" alt="Faster Issue Detection" class="value-prop-icon">
-                    <h3>Faster Issue Detection</h3>
-                    <p>Pinpoint data issues precisely with lineage tracing, drastically reducing time spent identifying
-                        problems within your data setup.</p>
-                </div>
-                <div class="value-prop-card">
-                    <img src="assets/value-prop2.svg" alt="Proactive Resolution" class="value-prop-icon">
-                    <h3>Proactive Resolution</h3>
-                    <p>Receive instant alerts to identify issues before stakeholders notify you, empowering teams to
-                        take proactive measures at speed.</p>
-                </div>
-                <div class="value-prop-card">
-                    <img src="assets/value-prop3.svg" alt="Analyse with AI" class="value-prop-icon">
-                    <h3>Analyse with AI</h3>
-                    <p>Leverage AI to analyze incidents, providing insights into causes and efficient solutions,
-                        speeding up issue resolution.</p>
-                </div>
-                <div class="value-prop-card">
-                    <img src="assets/value-prop4.svg" alt="Stay Compliance-Ready" class="value-prop-icon">
-                    <h3>Stay Compliance-Ready</h3>
-                    <p>Employ rigorous data quality checks, ensuring compliance with regulations and streamlining
-                        processes by identifying key data points.</p>
-                </div>
-                <div class="value-prop-card">
-                    <img src="assets/value-prop5.svg" alt="Collaborative Insights" class="value-prop-icon">
-                    <h3>Collaborative Insights</h3>
-                    <p>Foster team collaboration with shared dashboards and real-time updates, enhancing overall data
-                        management efficiency.</p>
-                </div>
-                <div class="value-prop-card">
-                    <img src="assets/value-prop6.svg" alt="Customizable Workflows" class="value-prop-icon">
-                    <h3>Customizable Workflows</h3>
-                    <p>Tailor data workflows to your specific needs, ensuring optimal performance and adaptability in
-                        your unique data ecosystem.</p>
-                </div>
-            </div>
-        </div>
-        <div class="slider-dots-container">
-            <div class="slider-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
-    </section>
-    <section class="data-integration">
-        <div class="integration-background">
-            <img src="assets/data-integrations-bg.png" alt="Data Integrations Background" class="integration-bg-image">
-        </div>
-        <div class="integration-content">
-            <img src="assets/stack-sign.svg" alt="Stack Symbol" class="stack-symbol">
-            <h2>Data</h2>
-            <h2>Stack</h2>
-            <h2>Integration</h2>
-        </div>
-    </section>
-
-    <!--    <section id="about-section" class="section about-us">-->
-    <!--        <h2>About Us</h2>-->
-    <!--        <p class="about-us-description">Meet the founders, the brains behind Stackbrains!</p>-->
-    <!--        <div class="about-us-container">-->
-    <!--            <div class="team-member">-->
-    <!--                <a href="https://www.linkedin.com/in/zhicongpan/" target="_blank">-->
-    <!--                    <img src="assets/zhicong.png" alt="Zhicong Pan" class="member-image">-->
-    <!--                </a>-->
-    <!--                <a href="https://www.linkedin.com/in/zhicongpan/" target="_blank">-->
-    <!--                    <h3 class="member-name">Zhicong Pan, <span class="member-title">CEO</span></h3>-->
-    <!--                </a>-->
-    <!--                <div class="member-bio">-->
-    <!--                    <p>Zhicong's journey into data management and big data analytics began in 2010, driven by a deep-->
-    <!--                        curiosity and passion for turning raw data into actionable insights.</p>-->
-    <!--                    <p>With over 15 years of experience, Zhicong spearheaded multiple successful digital transformations-->
-    <!--                        for some of the world's largest companies, from leading the development of Visa's 1st merchant-->
-    <!--                        recommendation engine in 2016 to being the Chief Data Officer/Department Head where he reshaped-->
-    <!--                        data strategies and decision-making for the companies that he worked with.</p>-->
-    <!--                    <p>His work as an analytics consultant has spanned multiple industries, including finance, airlines,-->
-    <!--                        retail, transportation, insurance etc., helping clients navigate complex data challenges and-->
-    <!--                        unlock new opportunities.</p>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--            <div class="team-member">-->
-    <!--                <a href="https://www.linkedin.com/in/akashbw/" target="_blank">-->
-    <!--                    <img src="assets/akash.png" alt="Akash Jain" class="member-image">-->
-    <!--                </a>-->
-    <!--                <a href="https://www.linkedin.com/in/akashbw/" target="_blank">-->
-    <!--                    <h3 class="member-name">Akash Jain, <span class="member-title">CTO</span></h3>-->
-    <!--                </a>-->
-    <!--                <div class="member-bio">-->
-    <!--                    <p>With 7+ years of experience in Data and Engineering, Akash has developed a deep understanding of-->
-    <!--                        the technological challenges that early-stage companies face from the very start of his career.-->
-    <!--                        From early on in his career he has driven growth in startups across fintech, shipping, and SaaS-->
-    <!--                        products.</p>-->
-    <!--                    <p>With Master's degree in Computer Networks and Information Security and his early experiences at-->
-    <!--                        startups, like at Portcast—taught him not just to build but also to scale technologies from the-->
-    <!--                        ground up and achieve significant milestones like 1M+ ARR.</p>-->
-    <!--                    <p>These experiences have been pivotal in cultivating his ability to see beyond immediate tech-->
-    <!--                        challenges to the broader business impacts, a quality that has become a strong foundation of his-->
-    <!--                        role as CTO at Stackbrains.</p>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </section>-->
-
-
-    <section id="about-us" class="section our-story">
-        <h2>Our Story</h2>
-        <p class="about-us-description">Meet the founders, the brains behind Stackbrains!</p>
-        <div class="story-content">
-            <div class="story-image">
-                <img src="assets/our-story.png" alt="Our Story">
-            </div>
-            <div class="story-text">
-                <a href="https://www.linkedin.com/in/zhicongpan/" target="_blank">
-                    <p class="sub-emphasized">Zhicong Pan, CEO</p>
-                </a>
-                <p>
-                    With over 15 years in data management and analytics, Zhicong has led digital transformations for
-                    major organizations, including building innovative data solutions that have reshaped decision-making
-                    processes. His expertise spans industries like finance, retail, and transportation, where he has
-                    solved complex data challenges and driven strategic growth.
-                </p>
-                <a href="https://www.linkedin.com/in/akashbw/" target="_blank">
-                    <p class="sub-emphasized">Akash Jain, CTO</p>
-                </a>
-                <p>
-                    Akash has 7+ years of experience in Data and Engineering, helping early-stage companies scale from
-                    the ground up. His work in the fintech and analytics SaaS space, combined with his ability to drive
-                    rapid growth, gives him a unique perspective on building and scaling data-centric technologies. His
-                    experience and passion shapes Stackbrains' technical vision.
-                </p>
-                <p class="sub-emphasized">Our Journey</p>
-                <p>
-                    We met during the Antler program and quickly discovered a shared passion for data and
-                    problem-solving.</p>
-                <p>
-                    From the very first conversation, we found a strong synergy—our complementary
-                    skills and experiences in the data space made it clear that we could build something transformative
-                    together.</p>
-                <p>Zhicong's deep experience and leadership in data and Akash's technical expertise in building
-                    scalable data products create a unique blend of vision and execution. Our shared excitement and
-                    extensive
-                    experience make us the perfect team to tackle the challenges in data observability and build a
-                    product that drives real impact.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="faq-section">
-        <h2>Frequently asked Questions</h2>
-        <!--        <p class="faq-description">Quick answers to questions you may have. Can't find what you're looking for? Check out our full documentation.</p>-->
-
-        <div class="faq-grid">
-            <div class="faq-item">
-                <div class="faq-icon">
-                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
-                </div>
-                <div class="faq-content">
-                    <h3>What is Stackbrains, and how can it help my business?</h3>
-                    <p>Stackbrains is an advanced observability and data management platform designed to provide
-                        end-to-end visibility across your entire data stack. It helps ensure data quality, governance,
-                        and trust, allowing your business to make informed decisions based on accurate and reliable
-                        data.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-icon">
-                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
-                </div>
-                <div class="faq-content">
-                    <h3>How does Stackbrains ensure data quality and trust?</h3>
-                    <p>Stackbrains uses a combination of custom quality checks, machine learning-based monitoring, and
-                        AI-driven solutions to proactively identify and resolve data inconsistencies. This ensures that
-                        your
-                        data is always accurate, up-to-date, and trustworthy.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-icon">
-                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
-                </div>
-                <div class="faq-content">
-                    <h3>Can Stackbrains integrate with my existing data infrastructure?</h3>
-                    <p>Yes, Stackbrains is designed to integrate seamlessly with your existing data stack. Whether
-                        you're
-                        using cloud-based data warehouses, on-premises databases, or a hybrid approach, Stackbrains
-                        provides
-                        comprehensive observability and monitoring across all your data sources.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-icon">
-                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
-                </div>
-                <div class="faq-content">
-                    <h3>How does Stackbrains handle data security during implementation?</h3>
-                    <p>Stackbrains takes data security seriously. During implementation, we ensure that all data
-                        connections are encrypted, access controls are properly configured, and only authorized users
-                        have access to sensitive data. We also provide audit logs to track user activities and data
-                        changes.</p>
-
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-icon">
-                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
-                </div>
-                <div class="faq-content">
-                    <h3>How long does it take to fully implement Stackbrains?</h3>
-                    <p>The implementation timeline for Stackbrains can vary depending on the complexity of your data
-                        stack and the level of customization required. Typically, the initial setup can be completed
-                        within a few days, with full implementation, including custom configurations and user training,
-                        taking between 2 and 4 weeks.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-icon">
-                    <img src="assets/faq-icon.svg" alt="FAQ Icon">
-                </div>
-                <div class="faq-content">
-                    <h3>What are the system requirements for deploying Stackbrains?</h3>
-                    <p>Stackbrains is designed to be flexible and can be deployed in various environments, including
-                        cloud-based platforms (like AWS, GCP, Azure) and on-premises servers. The exact system
-                        requirements will depend on the scale of your data operations, but generally, you'll need a
-                        robust server environment with adequate storage and processing power to handle your data
-                        volumes.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <section class="final-section">
-        <div class="final-content">
-            <h2>Ready to Transform Your Data Stack?</h2>
-            <p>Join the revolution in embracing the future of data observability with <span class="company-name">stackbrains_</span>
-            </p>
-            <a href="https://app.youform.com/forms/q75ibqeh" target="_blank">
-                <button class="talk-to-us-today-button">Talk to us Today !</button>
-            </a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-left">
-                <div class="logo">
-                    <img src="assets/small-logo.png" alt="Stackbrains Logo">
-                    <span class="company-name">stackbrains_</span>
-                </div>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/company/stackbrains/" target="_blank" class="linkedin">
-                        <img src="assets/linkedin_logo.svg" alt="LinkedIn">
-                    </a>
-                    <!--                    <a href="#" class="twitter">-->
-                    <!--                        <img src="assets/twitter_logo.svg" alt="Twitter">-->
-                    <!--                    </a>-->
-                </div>
-            </div>
-            <!--                        <nav class="footer-nav">-->
-            <!--                            <a href="#product">Product</a>-->
-            <!--                            <a href="#integration">Integration</a>-->
-            <!--                            <a href="#about-us">About Us</a>-->
-            <!--                        </nav>-->
-            <div class="footer-contact">
-                <a href="mailto:connect@stackbrains.dev" class="email">connect@stackbrains.dev</a>
-                <a href="tel:+6590884192" class="phone">+65 9088 4192</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>Copyright © Stackbrains Pte. Ltd. 2025 All Rights Reserved</p>
-        </div>
-    </footer>
-</main>
+  <div class="loading">Loading<span class="dots"></span></div>
 </body>
 </html>
