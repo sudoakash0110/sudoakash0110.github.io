@@ -1,0 +1,181 @@
+:root {
+  --text: #171717;
+  --muted: #6b6b6b;
+  --line: #e5e5e5;
+  --background: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  color: var(--text);
+  background: var(--background);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+
+.page {
+  width: min(880px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.name {
+  font-size: 0.95rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.text-link {
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-decoration: none;
+}
+
+.text-link:hover,
+.links a:hover {
+  color: var(--text);
+}
+
+.intro {
+  min-height: calc(100vh - 72px);
+  min-height: calc(100dvh - 72px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  align-items: center;
+  gap: clamp(48px, 9vw, 96px);
+  padding: 56px 0;
+}
+
+.location {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: clamp(2.3rem, 6vw, 3.7rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  font-weight: 650;
+}
+
+.bio {
+  max-width: 510px;
+  margin: 0;
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 26px;
+}
+
+.links a {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.portrait {
+  display: block;
+  width: 280px;
+  height: 280px;
+  border-radius: 18px;
+  object-fit: cover;
+  object-position: center 14%;
+}
+
+/* Resume */
+.resume-page {
+  height: 100vh;
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: 60px minmax(0, 1fr);
+  background: #f3f3f3;
+}
+
+.resume-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.download {
+  padding: 9px 13px;
+  color: #fff;
+  background: var(--text);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pdf {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 680px) {
+  .page {
+    width: min(100% - 32px, 880px);
+  }
+
+  header {
+    height: 64px;
+  }
+
+  .intro {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding: 42px 0 56px;
+  }
+
+  .intro-copy {
+    order: 2;
+  }
+
+  .portrait {
+    width: 160px;
+    height: 160px;
+    border-radius: 14px;
+  }
+
+  .bio {
+    font-size: 1rem;
+  }
+
+  .resume-bar {
+    padding: 0 16px;
+  }
+}
