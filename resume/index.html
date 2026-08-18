@@ -158,5 +158,18 @@
       </section>
       </main>
     </object>
+
+    <script>
+      const resumeFallback = document.querySelector(".resume-document");
+
+      function enableFallbackScrolling() {
+        if (resumeFallback.getClientRects().length && resumeFallback.offsetHeight > 0) {
+          document.body.classList.add("resume-fallback-active");
+        }
+      }
+
+      window.addEventListener("load", enableFallbackScrolling, { once: true });
+      setTimeout(enableFallbackScrolling, 500);
+    </script>
   </body>
 </html>

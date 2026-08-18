@@ -148,6 +148,19 @@ h1 {
   overflow-y: auto;
 }
 
+.resume-page.resume-fallback-active {
+  height: auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: block;
+  overflow-y: auto;
+}
+
+.resume-fallback-active .pdf {
+  height: auto;
+  overflow: visible;
+}
+
 .resume-document {
   width: min(940px, calc(100% - 40px));
   margin: 36px auto 72px;
