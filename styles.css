@@ -110,18 +110,19 @@ h1 {
 
 /* Resume */
 .resume-page {
-  height: 100vh;
-  height: 100dvh;
-  display: grid;
-  grid-template-rows: 60px minmax(0, 1fr);
-  background: #f3f3f3;
+  min-height: 100vh;
+  background: #f5f5f5;
 }
 
 .resume-bar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 0 max(24px, calc((100% - 940px) / 2));
   background: #fff;
   border-bottom: 1px solid var(--line);
 }
@@ -136,11 +137,124 @@ h1 {
   text-decoration: none;
 }
 
-.pdf {
+.resume-document {
+  width: min(940px, calc(100% - 40px));
+  margin: 36px auto 72px;
+  padding: clamp(40px, 6vw, 72px);
+  background: #fff;
+  box-shadow: 0 2px 14px rgb(0 0 0 / 7%);
+}
+
+.resume-header {
   display: block;
-  width: 100%;
-  height: 100%;
+  height: auto;
   border: 0;
+}
+
+.resume-header h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.resume-title {
+  margin: 12px 0 20px;
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+
+.resume-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin: 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  list-style: none;
+}
+
+.resume-contact a {
+  text-decoration: none;
+}
+
+.resume-section {
+  margin-top: 48px;
+}
+
+.resume-section > h2 {
+  margin: 0 0 24px;
+  padding-bottom: 9px;
+  border-bottom: 2px solid var(--text);
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.job + .job {
+  margin-top: 32px;
+}
+
+.job-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.job-heading h3,
+.skills-grid h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.job-heading h3 span {
+  font-weight: 400;
+}
+
+.job-heading > p {
+  flex: none;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.job-heading > p span::before {
+  content: " · ";
+}
+
+.job ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+}
+
+.job li,
+.job.compact > p,
+.skills-grid p {
+  color: #3f3f3f;
+  font-size: 0.9rem;
+  line-height: 1.62;
+}
+
+.job li + li {
+  margin-top: 4px;
+}
+
+.job.compact > p {
+  margin: 8px 0 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 48px;
+}
+
+.skills-grid p {
+  margin: 5px 0 0;
 }
 
 @media (max-width: 800px) {
@@ -176,5 +290,49 @@ h1 {
 
   .resume-bar {
     padding: 0 16px;
+  }
+
+  .resume-document {
+    width: 100%;
+    margin: 0;
+    padding: 36px 20px 56px;
+    box-shadow: none;
+  }
+
+  .resume-title {
+    font-size: 0.98rem;
+  }
+
+  .resume-contact {
+    display: grid;
+    gap: 7px;
+  }
+
+  .resume-section {
+    margin-top: 40px;
+  }
+
+  .job + .job {
+    margin-top: 30px;
+  }
+
+  .job-heading {
+    display: block;
+  }
+
+  .job-heading > p {
+    margin-top: 4px;
+    white-space: normal;
+  }
+
+  .job li,
+  .job.compact > p,
+  .skills-grid p {
+    font-size: 0.88rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
   }
 }

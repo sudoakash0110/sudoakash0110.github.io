@@ -3,21 +3,158 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Resume of Akash Jain." />
-    <meta name="theme-color" content="#f3f3f3" />
-    <title>Resume — Akash Jain</title>
+    <meta name="description" content="Resume of Akash Jain, senior backend and platform engineer." />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Resume | Akash Jain</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body class="resume-page">
-    <div class="resume-bar">
+    <nav class="resume-bar" aria-label="Resume navigation">
       <a class="text-link" href="/">← Back</a>
       <a class="download" href="/assets/Akash_Jain_Resume.pdf" download="Akash_Jain_Resume.pdf">Download PDF</a>
-    </div>
-    <object class="pdf" data="/assets/Akash_Jain_Resume.pdf" type="application/pdf">
-      <p>
-        PDF preview is unavailable.
-        <a href="/assets/Akash_Jain_Resume.pdf" download>Download the resume.</a>
-      </p>
-    </object>
+    </nav>
+
+    <main class="resume-document">
+      <header class="resume-header">
+        <h1>Akash Jain</h1>
+        <p class="resume-title">Senior Backend/Platform Engineer | Applied AI Systems | Ex-Founder &amp; CTO</p>
+        <ul class="resume-contact" aria-label="Contact details">
+          <li><a href="mailto:akashjain0108@gmail.com">akashjain0108@gmail.com</a></li>
+          <li><a href="tel:+917073352017">+91 70733 52017</a></li>
+          <li>Bengaluru, India</li>
+          <li><a href="https://www.linkedin.com/in/akashbw" target="_blank" rel="noreferrer">linkedin.com/in/akashbw</a></li>
+        </ul>
+      </header>
+
+      <section class="resume-section" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Professional Experience</h2>
+
+        <article class="job">
+          <div class="job-heading">
+            <h3>CTO, <span>Keystonegtm Inc.</span></h3>
+            <p>Aug 2025 - Present <span>Bengaluru, India</span></p>
+          </div>
+          <ul>
+            <li>Owned engineering end to end, turning fragile n8n flows and backend APIs into reusable platform services that helped scale AI-led client engagements by 3x+.</li>
+            <li>Developed KEYSET, an AI agent platform with skill packaging, a registry with authentication and access control, a cloud runner, and desktop and web apps.</li>
+            <li>Built a cloud runner for long-running AI workflows with autonomous execution, pause and resume with saved state, Slack approvals, and recovery from transient failures.</li>
+            <li>Shipped a Customer Success system that combines meeting transcripts and HubSpot context to produce account health scores, risk signals, and assigned action items.</li>
+            <li>Expanded the data layer with OpenSearch and Postgres and built a web board for reviewing at-risk accounts, product gaps, and follow-ups.</li>
+            <li>Exposed Customer Success tasks and account context to Claude Desktop through MCP.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-heading">
+            <h3>Co-founder &amp; CTO, <span>Stackbrains</span></h3>
+            <p>Jun 2024 - Jul 2025 <span>Singapore</span></p>
+          </div>
+          <ul>
+            <li>Co-founded and led the startup as CTO, raised $125K in pre-seed funding from Antler SEA, and built a data observability platform for the modern data stack.</li>
+            <li>Designed a full-stack platform that helped data teams monitor schema changes, data quality, and pipeline failures.</li>
+            <li>Integrated an AI assistant for root cause analysis, custom monitor generation, and actionable guidance.</li>
+            <li>Partnered with a social media platform serving 30M+ users to automate real-time gaming revenue tracking, reducing reconciliation from two weeks to one day with transaction-level accuracy.</li>
+            <li>Worked with the CEO and commercial team to validate customer needs and shape the product during go-to-market and investor engagements.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-heading">
+            <h3>Entrepreneur in Residence - SG15, <span>Antler</span></h3>
+            <p>Oct 2023 - Dec 2023 <span>Singapore</span></p>
+          </div>
+          <ul>
+            <li>Led product and technical execution for a visibility platform in non-containerised ocean freight and qualified for Antler's final pre-seed funding round.</li>
+            <li>Built a data exploration MVP with universal search, dynamic filters, reporting, and EDI data ingestion over SFTP.</li>
+            <li>Collaborated on venture ideas across AI, carbon credits, and digital assets.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-heading">
+            <h3>Senior Software Engineer, <span>Triple A</span></h3>
+            <p>Dec 2022 - Sep 2023 <span>Singapore</span></p>
+          </div>
+          <ul>
+            <li>Migrated KYC components to an independent TypeScript and Express service supporting 300K transactions per week.</li>
+            <li>Built Go microservices to monitor transaction health across multiple blockchains and integrated them with the core service using Protobuf and RPC.</li>
+            <li>Created Node.js utilities for settlements, reporting, reconciliation, and suspected transfer identification.</li>
+            <li>Improved product reliability through test coverage and supported incident triage and root cause analysis.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-heading">
+            <h3>Senior Software Engineer, <span>Portcast</span></h3>
+            <p>Feb 2019 - Dec 2022 <span>Singapore</span></p>
+          </div>
+          <ul>
+            <li>Scaled container tracking by optimising core services and designing data pipelines that combined multiple sources for real-time vessel and container predictions.</li>
+            <li>Built client-facing tracking experiences in Vue.js, increasing product engagement by 84%.</li>
+            <li>Refactored Flask APIs and data infrastructure using Hasura and AWS Lambda to improve tracking and API performance.</li>
+            <li>Created FastAPI microservices for scalable data ingestion and serialisation and integrated Typesense for asset search.</li>
+            <li>Supported end-to-end testing of prediction models and integrated AWS SageMaker into the prediction engine.</li>
+            <li>Built monitoring and analytics dashboards with the ELK stack and AWS OpenSearch.</li>
+            <li>Improved CI/CD and operational tooling and led a team across software engineering, data engineering, and DevOps.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-heading">
+            <h3>Software Engineer, <span>Searchstax</span></h3>
+            <p>May 2018 - Feb 2019 <span>Gurgaon, India</span></p>
+          </div>
+          <ul>
+            <li>Integrated GCP for Solr deployments using Django REST Framework, Terraform, and Ansible.</li>
+            <li>Extended Azure and AWS integrations with autoscaling based on deployment performance.</li>
+            <li>Added granular monitoring controls and implemented disaster recovery automation for premium clients.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-heading">
+            <h3>Software Developer, <span>Stashfin</span></h3>
+            <p>Nov 2017 - May 2018 <span>New Delhi, India</span></p>
+          </div>
+          <ul>
+            <li>Extended an internal LAMP portal for managing customer loan journeys.</li>
+            <li>Built a Python Tornado service for real-time amortisation schedules across multiple lenders.</li>
+            <li>Integrated two credit bureaus and optimised performance-sensitive backend components with Django and MySQL.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-heading">
+            <h3>Software Developer, <span>Overcart</span></h3>
+            <p>Mar 2017 - Aug 2017 <span>Gurgaon, India</span></p>
+          </div>
+          <ul>
+            <li>Built a Django and jQuery workflow for sellers to import returned Amazon stock into the marketplace.</li>
+            <li>Developed an automated quality-control machine using servo motors, Arduino, sensors, and Raspberry Pi.</li>
+            <li>Reduced each quality check from seven minutes to under four and replaced unreliable sockets with MQTT.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="resume-section" aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+        <article class="job compact">
+          <div class="job-heading">
+            <h3>Manipal University Jaipur</h3>
+            <p>Aug 2014 - Jul 2016 <span>Jaipur, India</span></p>
+          </div>
+          <p>Master of Technology in Computer Networks and Information Security · CGPA: 7.83/10</p>
+        </article>
+      </section>
+
+      <section class="resume-section" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <div class="skills-grid">
+          <div><h3>Languages &amp; Frameworks</h3><p>Python, Go, TypeScript, JavaScript, FastAPI, Django, Flask, Express, React, Vue.js</p></div>
+          <div><h3>CloudOps</h3><p>AWS, Azure, GCP, Terraform, Pulumi, Ansible, Docker, Zabbix</p></div>
+          <div><h3>Databases</h3><p>PostgreSQL, MySQL, Redis, MongoDB, OpenSearch</p></div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
