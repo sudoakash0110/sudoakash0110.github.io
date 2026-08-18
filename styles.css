@@ -145,15 +145,16 @@ h1 {
   width: 100%;
   height: 100%;
   border: 0;
+  overflow-y: auto;
 }
 
 .resume-document {
-  display: none;
   width: min(940px, calc(100% - 40px));
   margin: 36px auto 72px;
   padding: clamp(40px, 6vw, 72px);
   background: #fff;
   box-shadow: 0 2px 14px rgb(0 0 0 / 7%);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .resume-header {
@@ -166,13 +167,15 @@ h1 {
   margin: 0;
   font-size: clamp(2.5rem, 6vw, 4.2rem);
   line-height: 1;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.035em;
+  font-weight: 700;
 }
 
 .resume-title {
   margin: 12px 0 20px;
   font-size: 1.08rem;
   line-height: 1.5;
+  font-style: italic;
 }
 
 .resume-contact {
@@ -184,6 +187,31 @@ h1 {
   color: var(--muted);
   font-size: 0.86rem;
   list-style: none;
+}
+
+.resume-contact li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.contact-icon {
+  width: 15px;
+  height: 15px;
+  flex: none;
+  fill: currentColor;
+  color: var(--text);
+}
+
+.linkedin-icon {
+  display: inline-grid;
+  place-items: center;
+  border-radius: 2px;
+  color: #fff;
+  background: var(--text);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .resume-contact a {
@@ -223,6 +251,7 @@ h1 {
 
 .job-heading h3 span {
   font-weight: 400;
+  font-style: italic;
 }
 
 .job-heading > p {
@@ -252,6 +281,11 @@ h1 {
 
 .job li + li {
   margin-top: 4px;
+}
+
+.job strong {
+  color: #202020;
+  font-weight: 700;
 }
 
 .job.compact > p {
@@ -303,19 +337,7 @@ h1 {
     padding: 0 16px;
   }
 
-  .resume-page {
-    height: auto;
-    min-height: 100vh;
-    min-height: 100dvh;
-    display: block;
-  }
-
-  .pdf {
-    display: none;
-  }
-
   .resume-document {
-    display: block;
     width: 100%;
     margin: 0;
     padding: 36px 20px 56px;
